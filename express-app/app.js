@@ -34,6 +34,21 @@ const userSchema = new mongoose.Schema({
   password: String,
 });
 const User = mongoose.model('User', userSchema);
+
+app.get('/http-method', (req, res) => {
+  res.status(200).json("GET METHOD");
+});
+app.put('/http-method', (req, res) => {
+  res.status(200).json("PUT METHOD");
+});
+app.post('/http-method', (req, res) => {
+  res.status(200).json("POST METHOD");
+});
+app.delete('/http-method', (req, res) => {
+  res.status(200).json("DELETE METHOD");
+});
+
+
 app.post('/add', async (req, res) => {
   try {
     const newUser = new User(req.body);
