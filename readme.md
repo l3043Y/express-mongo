@@ -42,7 +42,7 @@ curl --location 'localhost:3000/login' \
 ```
 ![image](https://github.com/l3043Y/express-mongo/assets/20104217/7404fe2d-f402-4e08-9b3f-7607f7709ecc)
 
-### Not Match
+### Mismatch
 ```bash
 curl --location 'localhost:3000/login' \
 --header 'Content-Type: application/json' \
