@@ -40,4 +40,5 @@ curl --location --request GET 'localhost:3000/search/1999' \
     "password": "sok.heng.sok.sabay"
 }'
 ```
-![image](https://github.com/l3043Y/express-mongo/assets/20104217/fc21ad31-9f1b-4128-8d47-e6eaaba770e4)
+![image](https://github.com/l3043Y/express-mongo/assets/20104217/d4c29985-a3fa-4ad4-b9fa-165fb9e35780)
+
