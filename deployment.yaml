@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: express-mongo-pod
+spec:
+  containers:
+    - name: expressjs-final
+      image: l3043y/express-final:v1.0 # Use your Express.js Docker image here
+      ports:
+        - containerPort: 3000

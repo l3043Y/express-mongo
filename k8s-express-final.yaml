@@ -1,0 +1,26 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: express-final-pod
+  labels:
+    app: express-final-pod # Add this label
+spec:
+  containers:
+    - name: expressjs-final
+      image: l3043y/express-final:v1.0 # Use your Express.js Docker image here
+      ports:
+        - containerPort: 3000
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: express-final-service
+spec:
+  selector:
+    app: express-final-pod # Match the labels of your Node.js pod
+  ports:
+    - protocol: TCP
+      port: 80 # The port to access the service from outside the cluster
+      targetPort: 3000 # The port your Node.js application is running on inside the pod
+  type: NodePort # Expose the service on a random port on all nodes
